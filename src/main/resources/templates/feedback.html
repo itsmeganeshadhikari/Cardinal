@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>List of Notice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"th:href="@{/css/sidebar.css}" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <!--    <h4>"${message}"</h4>-->
+    <div class="sidenav">
+        <a th:href="@{/adminlist}">AdminList</i></a>
+        <a th:href="@{/feedBackList}">FeedBackList</i></a>
+
+    </div>
+
+</div>
+
+
+<div class="container" style="border:1px solid red;width:750px;height:600px;margin-top:5px;overflow: auto;">
+    <br>
+
+    <div th:switch="${feedBack}">
+        <input type="text" id="myInput"  placeholder="Search...">
+
+
+        <div class="col-md-12">
+            <h2 th:case="null">No FeedBack yet!</h2>
+            <div th:case ="*">
+
+                <table class="table table-striped table-responsive-md" >
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Phone No</th>
+                    </tr>
+                    </thead>
+                    <tbody id="myTable">
+                    <tr th:each="x:${feedBack}" >
+
+                        <td th:text="${x.id}"></td>
+                        <td th:text="${x.email}"></td>
+                        <td th:text="${x.message}"></td>
+                        <td th:text="${x.phone}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("#myInput").on("keyup",function(){
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function()
+            {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function myFunction() {
+    //     // Declare variables
+    //     var input, filter, txtValue, tr, td, i, table;
+    //     input = document.getElementById("myInput");
+    //     filter = input.value.toLowerCase();
+    //     table = document.getElementById("myTable");
+    //     tr=table.getElementsByTagName("tr");
+    //
+    //     // Loop through all row items, and hide those who don't match the search query
+    //     for (i = 0; i < tr.length; i++) {
+    //         td = tr[i].getElementsByTagName("td")[0];
+    //         if (td) {
+    //             txtValue = td.textContent || td.innerText;
+    //             if (txtValue.toLowerCase().indexOf(filter) > -1) {
+    //                 tr[i].style.display = "";
+    //             } else {
+    //                 tr[i].style.display = "none";
+    //             }
+    //
+    //         }
+    //
+    //
+    //     }
+    // }
+
+</script>
+</body>
+
+
+</html>

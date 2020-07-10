@@ -1,0 +1,42 @@
+body{
+    font-family: "Times New Roman", Times, serif;
+    color:Black;
+}
+#x1{
+    /* border:1px solid black; */
+    height:950px;
+}
+#x12
+{
+    /* border:1px solid brown; */
+    height:750px;
+    /* margin-top:100px; */
+
+}
+#x13
+{
+    /* border:1px solid brown; */
+    height:100px;
+
+}
+@media only screen and (min-width:768px) and (max-width:992px)
+{
+    #x1{
+        
+        height:1250px;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:768px)
+{
+    #x1{
+        
+        height:1150px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:576px)
+{
+    #x1{
+        
+        height:1590px;
+    }
+}

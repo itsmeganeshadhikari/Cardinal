@@ -1,0 +1,441 @@
+body{
+    font-family: "Times New Roman", Times, serif;
+    color:black;
+}
+#ab
+{
+    /* border:1px solid black; */
+    height:440px;
+}
+#a
+{
+    height:200px;
+    /* border:1px solid red; */
+}
+.wrapper1000
+{
+    /* border:1px solid blue; */
+    height:200px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 165px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 165px;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 165px;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  #b
+  {
+    width:165px;
+    height:200px;
+  }
+  #c
+  {
+    /* border:1px solid blue; */
+    height:195px;
+  }
+  #ca
+  {
+    /* border:1px solid black; */
+    height:195px;
+
+  }
+  .wrapper1001
+  {
+    /* border:1px solid green; */
+    height:195px;
+
+  }
+  #cab
+  {
+    width:360px;
+    height:195px;
+  }
+  #cab1 {
+    background-color: transparent;
+    width: 360px;
+    height: 195px;
+    perspective: 1000px;
+  }
+  
+  #cab2 {
+    position: relative;
+    width: 360px;
+    height: 195px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  #cab1:hover #cab2 {
+    transform: rotateY(180deg);
+  }
+  
+  #cab3,#cab4 {
+    position: absolute;
+    width: 360px;
+    height: 195px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  #cab3 {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  #cab4 {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:768px) and (max-width:992px)
+{
+
+#ab
+{
+    /* border:1px solid black; */
+    height:850px;
+}
+#a
+{
+    height:200px;
+    /* border:1px solid red; */
+}
+.wrapper1000
+{
+    /* border:1px solid blue; */
+    height:193px;
+}
+#b{
+  width: 220px;
+  height: 193px;
+
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 220px;
+    height: 193px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 220px;
+    height: 193px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 220px;
+    height: 193px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .wrapper1001
+  {
+    /* border:1px solid green; */
+    height:192px;
+
+  }
+
+  #cab
+  {
+    width:220px;
+    height:192px;
+  }
+  #cab1 {
+    background-color: transparent;
+    width: 220px;
+    height: 192px;
+    perspective: 1000px;
+  }
+  
+  #cab2 {
+    position: relative;
+    width: 220px;
+    height: 192px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  #cab1:hover #cab2 {
+    transform: rotateY(180deg);
+  }
+  
+  #cab3,#cab4 {
+    position: absolute;
+    width: 220px;
+    height: 192px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  #cab3 {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  #cab4 {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (min-width:200px) and (max-width:768px)
+{
+    .wrapper1000
+{
+    /* border:1px solid blue; */
+    height:193px;
+}
+    #ab
+{
+    /* border:1px solid black; */
+    height:2428px;
+}
+#a
+{
+    height:200px;
+    /* border:1px solid red; */
+}
+
+
+
+#b{
+  width: 666px;
+  height: 193px;
+
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 666px;
+    height: 193px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 666px;
+    height: 193px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 666px;
+    height: 193px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  #c
+  {
+    /* border:1px solid blue; */
+    height:600px;
+  }
+  #ca
+  {
+    /* border:1px solid black; */
+    height:199px;
+
+  }
+  .wrapper1001
+  {
+    /* border:1px solid green; */
+    height:192px;
+
+  }
+  #cab
+  {
+    width:666px;
+    height:191px;
+  }
+  #cab1 {
+    background-color: transparent;
+    width: 6px;
+    height: 190px;
+    perspective: 1000px;
+  }
+  
+  #cab2 {
+    position: relative;
+    width: 666px;
+    height: 190px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  #cab1:hover #cab2 {
+    transform: rotateY(180deg);
+  }
+  
+  #cab3,#cab4 {
+    position: absolute;
+    width: 666px;
+    height: 190px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  #cab3 {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  #cab4 {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

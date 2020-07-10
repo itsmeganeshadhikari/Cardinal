@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="navbar">
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(2, 51, 51);">
+    <!-- Brand -->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" th:href="@{/principaldesk}">Principal's Desk</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/home}">Home</a></li>
+
+
+                <li><a th:href="@{/readmore}">About us</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">features<span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{/houseSystem}" >House System</a></li>
+                        <li><a th:href="@{/schoolTransport}">School Tansport</a></li>
+                        <li><a  th:href="@{/sports}">Sports and Games</a></li>
+                        <li><a  th:href="@{/curriculum}">Curriculum</a></li>
+                        <li><a  th:href="@{/attendance}">Attendance</a></li>
+                        <li><a th:href="@{/project}">Project Work</a></li>
+                        <li><a th:href="@{/studentcouncil}">Students Council</a></li>
+                        <li><a  th:href="@{/cocurricular}">Co-curricular activites</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Process<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class th:href="@{/admin}">Admission</a></li>
+                        <li><a class th:href="@{/infra}">Infrastructure</a></li>
+                        <li><a class th:href="@{/affil}">AFFILATION</a></li>
+                    </ul>
+                </li>
+
+                <li><a th:href="@{/gallery}">Gallery</a></li>
+                <!-- <li><a href="#">Notices</a></li> -->
+
+            </ul>
+<!--            <ul class="nav navbar-nav navbar-right">-->
+<!--                <li><a href="#"><span class="glyphicon glyphicon-user"></span>SignUp</a></li>-->
+<!--                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>-->
+<!--            </ul>-->
+        </div>
+    </div>
+</nav>
+</div>
+
+
+
+
+<div th:fragment="footer">
+
+
+<!--Footer-->
+
+<div class="container-fluid" style="margin:0;padding:0;" >
+
+    <div class="wrapper22">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <img src="../images/logo.png" class="img-rounded" alt="logo of sayapatri" style="width:120px;height:100px;margin-left:35px;margin-top:20px;">
+                <h3 id="eg2"><b>Sayapatri Higher Secondary School</b></h3>
+                <p id="eg3"><b>Ramgram-1,Parasi,Nepal</b></p>
+                <br><br>
+                <p id="eg4">In spite its geographical boundaries, the people of both India and Nepal lived as one,
+                    from time immemorial. They crossed the boundaries without restriction for business,
+                    employment and education.Nepal has a sizeable best replica watches number of Indians
+                    and their contribution in the development..<a th:href="@{/readmore}"style="color:brown;" >[Read More...]</a></p>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12" >
+                <h2 id="a171" ><b>Contact Us</b></h2>
+                <i class="fa fa-map-marker" style="font-size:20px;color:white; margin-left:10px;"><h4 id="z121">G.P.O.Box No:1497,Kathmandu</h4></i>
+                <br>
+                <i class="fa fa-phone" style="font-size:20px;color:white;margin-left:10px;"><h4 id="z121">014330088,014330163,9851211582</h4></i>
+                <br>
+                <i class="fa fa-mobile-phone" style="font-size:20px; color:white;margin-left:10px;"><h4 id="z121">01-4331690</h4></i>
+                <br>
+                <i class="fa fa-envelope" style="font-size:20px;color:white;margin-left:10px;"><h4 id="z121">info@misktm.edu.np(PA to Principal)</h4></i>
+                <br>
+                <i class="fa fa-envelope" style="font-size:20px; color:white;margin-left:10px;"><h4 id="z121">Principal@misktm.edu.np(For direct communication with Principal Sir)</h4></i>
+            </div>
+
+
+            <div class=" col-lg-4 col-md-12 col-sm-12">
+
+                <h2 id="a171"><b>Feedback Form</b></h2>
+
+
+                <form  action="#" th:action="@{/addFeedback}" th:object="${feedback}" id="kj" method="POST">
+
+
+<!--                    <div th:if ="${message1 == null}">-->
+<!--                        <div class="alert alert-danger">-->
+<!--                            ${message1}-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    </th:if>-->
+                    <div class="form-group">
+                        <input type="email"  th:name="Email" placeholder="Email Address" class="form-control"  >
+
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control rounded-0"   th:name="message" id="exampleFormControlTextarea2"  rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="number"   class="form-control"  th:name="phone" placeholder="PhoneNo:+977-xxxxxxxxxx"  >
+
+                    </div>
+                    <div class="g-recaptcha"
+                         data-sitekey="6Lc4C64ZAAAAAJZkEPMV8uepgJb3YnUBpFWU8z9R" >
+                    </div>
+                    <button type="submit" class="btn btn-default" >Submit</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+</div><!--end of footer-->
+</div>
+<!--logo-->
+<div th:fragment="logo">
+<div class="container">
+    <div class="wrapper1">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <img src="../images/logo.png" class="img-rounded" alt="logo of sayapatri" style="width:120px;height:100px;">
+                <!-- </div>
+                <div class="col-lg-10 col-md-10"> -->
+                <h3 id="abc" style=" font-family:Times New Roman, Times, serif; color:black;"><strong>Sayapatri Higher Secondary School</strong> </h3>
+                <p id ="abc1"><b>Ramgram-1,Parasi,Nepal</b></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of logo-->
+</div>
+
+</html>

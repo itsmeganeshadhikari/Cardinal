@@ -1,0 +1,14 @@
+#ab
+{
+    border:1px solid black;
+    height:350px;
+    margin-bottom:60px;
+}
+.card
+{
+    width:1040px;
+    height:100px;
+    border:1px solid black;
+    justify-content: center;
+
+}

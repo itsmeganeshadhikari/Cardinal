@@ -1,0 +1,31 @@
+body{
+    font-family: "Times New Roman", Times, serif;
+    color:black;
+}
+#a
+{
+    margin-top:55px;
+    text-align: center;
+
+}
+#b
+{
+    margin-top:45px;
+    margin-left:30px;
+}
+#c
+{
+    margin-left:30px;
+}
+#ab
+{
+    border:1px solid black;
+    height:700px;
+}
+@media only screen and (max-width:768px)
+{
+ #ab
+    {
+        height:1100px;
+    } 
+}

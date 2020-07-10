@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Sayapatri Higher Secondary School</title>
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link th:href="@{/css/style.css}"  type="text/css" rel="stylesheet" />
+<link th:href="@{/css/fullnotice.css}"  type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div th:replace="header::navbar"/>
+<div th:replace="header::logo"/>
+<div class="container" id="ab">
+
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div th:each="y:${noticess}">
+            <div class="card"  style="margin-top:15px; background-color: #474361;color:white;">
+                <h1 th:text="${y.title}" style="margin-left:15px;"></h1>
+                <strong><p th:text="${y.createdDate}" style="text-align: center;" ></p></strong>
+            </div>
+            <div class="card" style="height:200px; background-color: #474361;color:white;">
+                <strong><p th:text="${y.message}" style="margin-left:15px;margin-top:15px;"></p></strong>
+            </div>
+
+        </div>
+        </div>
+
+
+</div>
+
+
+<div th:replace="header::footer"/>
+</body>
+</html>
+</html>
